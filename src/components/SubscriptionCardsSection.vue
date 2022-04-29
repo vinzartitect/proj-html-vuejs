@@ -61,6 +61,34 @@
         </div>
       </div>
       <!-- fine cards piani di abbonamento -->
+      <!-- input con bottone start -->
+      <div class="row text-center justify-content-center pt-5 mb-5">
+        <div class="col-12 col-lg-6">
+          <h2 class="fw-bold mb-4">Want to be among the first to find out?</h2>
+          <p class="text-secondary mb-4">
+            Start working with
+            <span class="my-blue-text fw-bold">Landrick</span> that can provide
+            everthing you need to generate <br />
+            awareness, drive traffic, connect.
+          </p>
+          <form class="input-group">
+            <label for="email"></label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email Address"
+            />
+            <button
+              id="btn-getStarted"
+              class="btn text-white btn-outline-secondary"
+              type="sumbmit"
+            >
+              Get Started
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- fine input con bottone start -->
     </div>
   </section>
   <!-- fine SECTION card con diversi abbonamenti -->
@@ -131,7 +159,11 @@ div.card:hover {
   border-bottom: 4px solid #2f55d4;
   box-shadow: 0 0 15px rgb(200, 200, 200);
 }
-div.card a#buy-now:hover {
+button#btn-getStarted {
+  background-color: #2f55d4;
+}
+div.card a#buy-now:hover,
+button#btn-getStarted:hover {
   background-color: #2844aa;
 }
 </style>
