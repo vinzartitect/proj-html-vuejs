@@ -4,6 +4,7 @@
     <KeyFeaturesSection />
     <QuickStartSection />
     <ToolsSection />
+    <SubscriptionCardsSection />
   </main>
 </template>
 
@@ -12,6 +13,7 @@ import AboutSection from "./AboutSection.vue";
 import KeyFeaturesSection from "./KeyFeaturesSection.vue";
 import QuickStartSection from "./QuickStartSection.vue";
 import ToolsSection from "./ToolsSection.vue";
+import SubscriptionCardsSection from "./SubscriptionCardsSection.vue";
 
 export default {
   name: "MainComp",
@@ -20,6 +22,7 @@ export default {
     KeyFeaturesSection,
     QuickStartSection,
     ToolsSection,
+    SubscriptionCardsSection,
   },
 };
 </script>
