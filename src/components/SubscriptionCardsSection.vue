@@ -17,6 +17,50 @@
         </div>
       </div>
       <!-- fine testo centrale in alto -->
+      <!-- cards piani di abbonamento -->
+      <div class="row mb-5">
+        <div
+          class="col-12 col-lg-4 mb-5"
+          v-for="(card, index) in subscriptionPlans"
+          :key="index"
+        >
+          <div class="card overflow-hidden p-4">
+            <div class="card-body">
+              <span
+                id="plans"
+                class="d-inline-block fw-bold my-blue-text my-alice-blue-bg border rounded-pill mb-3"
+                >{{ card.planType }}</span
+              >
+              <h2 class="card-text fw-bold">{{ card.price }}</h2>
+              <p class="card-text text-secondary">Per Month</p>
+              <p class="card-text text-secondary">{{ card.text }}</p>
+              <hr />
+              <ul class="card-text p-0 mb-4">
+                <li
+                  class="d-flex align-items-center text-secondary fw-bold mb-2"
+                  v-for="(element, index) in propertiesPlan"
+                  :key="index"
+                >
+                  <span class="fas fa-check my-fa-check-blue me-2"></span
+                  >{{ element.property }}
+                </li>
+              </ul>
+              <div class="card-text d-flex text-center mb-3">
+                <a
+                  id="buy-now"
+                  class="col-12 me-3 text-decoration-none p-2 text-white my-blue-bg rounded shadow-lg"
+                  href="#"
+                  >Buy Now</a
+                >
+              </div>
+              <span class="card-text text-secondary"
+                >*No credit card required</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- fine cards piani di abbonamento -->
     </div>
   </section>
   <!-- fine SECTION card con diversi abbonamenti -->
@@ -25,7 +69,69 @@
 <script>
 export default {
   name: "SubscriptionCardsSection",
+
+  data: function () {
+    return {
+      /* array dei piani di abbonamento */
+      subscriptionPlans: [
+        {
+          planType: "Basic",
+          price: "$9.00",
+          text: "All the basics for businesses that are just getting started",
+          best: false,
+        },
+        {
+          planType: "Business",
+          price: "$39.00",
+          text: "Better for growing businesses that want more customers.",
+          best: true,
+        },
+        {
+          planType: "Enterprise",
+          price: "$79.00",
+          text: "Advanced features for pros who need more customization.",
+          best: false,
+        },
+      ],
+      /* array delle caratteristiche degli abbonamenti */
+      propertiesPlan: [
+        {
+          property: "Full Access",
+        },
+        {
+          property: "Enhanced Security",
+        },
+        {
+          property: "Source Files",
+        },
+        {
+          property: "1 Domain Free",
+        },
+        {
+          property: "Enhanced Security",
+        },
+      ],
+    };
+  },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+div.card {
+  border-bottom: 4px solid rgb(150, 150, 150);
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+
+  span#plans {
+    padding: 0.5rem 1.5rem;
+  }
+}
+div.card:hover {
+  transform: scale(1.05);
+  border-bottom: 4px solid #2f55d4;
+  box-shadow: 0 0 15px rgb(200, 200, 200);
+}
+div.card a#buy-now:hover {
+  background-color: #2844aa;
+}
+</style>
