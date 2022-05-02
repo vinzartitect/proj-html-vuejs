@@ -1,7 +1,7 @@
 <template>
   <!-- footer in basso -->
   <section class="container px-5">
-    <div class="row py-4">
+    <div class="row align-items-center py-4 my-footer-b">
       <!-- scritta copyright -->
       <div class="col">
         <p class="text-secondary">
@@ -21,6 +21,14 @@
         />
       </div>
       <!-- fine carte di credito -->
+      <!-- bottone posizionato a destra -->
+      <a
+        class="my-btn d-flex align-items-center justify-content-center"
+        href="#"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+      <!-- fine bottone posizionato a destra -->
     </div>
   </section>
   <!-- fine footer in basso -->
@@ -60,6 +68,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.my-footer-b {
+  position: relative;
+  .my-btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #2b48aa;
+    color: #bec1c8;
+    border-radius: 5px;
+    right: -100px;
+  }
+}
 img {
   height: 25px;
 }
