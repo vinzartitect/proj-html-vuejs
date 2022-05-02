@@ -26,6 +26,7 @@
         >
           <div class="card overflow-hidden p-4">
             <div class="card-body">
+              <span v-if="card.best == true" class="label-card"> Best </span>
               <span
                 id="plans"
                 class="d-inline-block fw-bold my-blue-text my-alice-blue-bg border rounded-pill mb-3"
@@ -165,5 +166,20 @@ button#btn-getStarted {
 div.card a#buy-now:hover,
 button#btn-getStarted:hover {
   background-color: #2844aa;
+}
+.label-card {
+  width: 160px;
+  height: 32px;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 2px 3px rgba(136, 136, 136, 0.25);
+  background: #f17425;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -42px;
+  top: 20px;
+  padding-top: 7px;
 }
 </style>
